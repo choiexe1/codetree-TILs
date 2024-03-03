@@ -1,11 +1,8 @@
 a, b, c = map(int, input().split())
-condition = True
+condition = False
 
 for i in range(a, b + 1):
-    if c / i == 0:
-        condition = False
+    if i % c == 0:
+        condition = True
 
-if condition:
-    print("YES")
-else:
-    print("NO")
+print("NO" if condition else "YES")
