@@ -1,9 +1,12 @@
 n = int(input())
+prod = 1
 x = 0
-i = 1
+
 while True:
-    if n % 2 == 0 and i * 2 == n:
-        x = i
+    if n == prod:
         break
-    i += 1
+    
+    prod *= 2
+    x += 1
+
 print(x)
