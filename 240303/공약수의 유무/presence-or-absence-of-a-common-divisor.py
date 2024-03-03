@@ -1,7 +1,7 @@
 a, b = map(int, input().split())
 satisfied = False
 
-for i in range(a, b + 1):
+for i in range(a, b):
     if 1920 % i == 0:
         satisfied = True
     if 2880 % i == 0:
