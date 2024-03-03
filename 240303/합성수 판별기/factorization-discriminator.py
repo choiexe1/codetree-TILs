@@ -1,10 +1,8 @@
 n = int(input())
 s = False
 
-for i in range(2, n + 1):
-    if i % 2 == 0:
-        s = True
-    if i % 3 == 0:
+for i in range(2, n):
+    if n % i == 0:
         s = True
 
 if s:
