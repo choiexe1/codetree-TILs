@@ -1,5 +1,10 @@
 a, b, c = map(int, input().split())
-if (c * 2) in range(a, b + 1):
-    print("YES")
-else:
-    print("NO")
+exist = False
+
+for i in range(a, b + 1):
+    if exist:
+        print("YES")
+        break
+
+    if i % c == 0:
+        exist = True
