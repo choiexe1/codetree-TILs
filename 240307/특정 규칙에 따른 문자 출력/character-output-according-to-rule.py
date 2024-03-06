@@ -8,15 +8,7 @@ for i in range(n):
     print()
 
 
-for i in range(n - 2, -1, -1):
-    # for j in range(n + 1 - (2 * i)):
-    #     print(" ", end="")
+for i in range(n - 1, -1, -1):
     for k in range(i):
         print("@", end=" ")
     print()
-
-
-# 3
-# 0, 4
-# 1, 2
-# 2, 0
