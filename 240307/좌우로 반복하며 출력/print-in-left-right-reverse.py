@@ -1,15 +1,16 @@
 n = int(input())
-x, y = 1, 4
-
+cnt = 1
 
 for i in range(n):
     for _ in range(n):
         if i % 2 == 0:
-            print(x, end="")
-            x += 1
+            if cnt <= 0:
+                cnt = 1
+            print(cnt, end="")
+            cnt += 1
         else:
-            print(y, end="")
-            y -= 1
-    x = 1
-    y = 4
+            if cnt > 6:
+                cnt = 6
+            print(cnt, end="")
+            cnt -= 1
     print()
