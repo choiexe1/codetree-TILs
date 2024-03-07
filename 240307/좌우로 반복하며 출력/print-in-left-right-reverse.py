@@ -9,8 +9,8 @@ for i in range(n):
             print(cnt, end="")
             cnt += 1
         else:
-            if cnt > 6:
-                cnt = 6
+            if cnt > n:
+                cnt = n
             print(cnt, end="")
             cnt -= 1
     print()
