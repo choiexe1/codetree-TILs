@@ -1,7 +1,8 @@
 m = int(input())
-cnt = 0
+
 
 for i in range(m):
+    cnt = 0
     n = int(input())
 
     while n > 1:
