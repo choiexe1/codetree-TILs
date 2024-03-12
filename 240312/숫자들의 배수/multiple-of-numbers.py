@@ -1,8 +1,9 @@
 n = int(input())
+sum = n
 count = 0
 
 while count < 2:
-    if n % 5 == 0:
+    if sum % 5 == 0:
         count += 1
-    print(n, end=" ")
-    n += n
+    print(sum, end=" ")
+    sum += n
