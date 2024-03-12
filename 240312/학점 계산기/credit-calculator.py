@@ -7,9 +7,7 @@ print(f"{avg:.1f}")
 
 if avg >= 4.0:
     print("Perfect")
-
-if avg >= 3.0:
+elif avg >= 3.0:
     print("Good")
-
-if avg < 3.0:
+else:
     print("Poor")
