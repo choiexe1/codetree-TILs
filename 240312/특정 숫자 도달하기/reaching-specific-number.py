@@ -6,7 +6,7 @@ for i in range(len(arr)):
         count += 1
         sum += arr[i]
     
-    if arr[i] >= 250:
+    if arr[i] >= 250 or i == len(arr) - 1:
         print(sum, end=" ")
         print(f"{sum / count:.1f}")
         break
