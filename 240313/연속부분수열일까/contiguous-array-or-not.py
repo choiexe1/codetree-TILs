@@ -15,10 +15,12 @@ is_sequnce = False
 
 if index:
     for k in range(index, n1):
-        if a[k] == b[i]:
+        if a[k + 1] == b[i + 1]:
             is_sequnce = True
+            break
         else:
             is_sequnce = False
+            break
 
 if is_sequnce:
     print("Yes")
