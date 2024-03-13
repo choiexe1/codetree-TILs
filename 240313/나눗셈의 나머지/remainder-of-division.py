@@ -1,7 +1,7 @@
 a, b = map(int, input().split())
 x = [0] * b
 
-while a >= 1:
+while a > 1:
     x[a % b] += 1
     a = a // b
 
