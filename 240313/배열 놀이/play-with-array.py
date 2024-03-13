@@ -14,3 +14,4 @@ for _ in range(q):
     else:
         for i in range(query[1] - 1, query[2]):
             print(e[i], end=" ")
+        print()
