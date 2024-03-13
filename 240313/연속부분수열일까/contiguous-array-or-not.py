@@ -2,23 +2,21 @@ n1, n2 = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
-count = 0
-l, r = 0, 0
+x = a.index(b[0])
+is_sequnce = True
 
-while True:
-    if count >= 2:
-        break    
-    
-    if a[l] == b[r]:
-        count += 1
-    
-    if r >= len(b) - 1:
-        r = 0
-        l += 1
+i = 0
+while i <= len(b):
+    if i == len(b):
+        break
+    if a[x] != b[i]:
+        is_sequnce = False
+        break
     else:
-        r += 1
+        x += 1
+        i += 1
 
-if count > 2:
+if is_sequnce:
     print("Yes")
 else:
     print("No")
