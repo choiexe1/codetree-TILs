@@ -1,28 +1,23 @@
-n1, n2 = map(int, input().split())
+import sys
+
+n1, n2 = tuple(map(int, input().split()))
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
-def find_index(array, integer):
-    for i, e in enumerate(array):
-        if integer == e:
-            return i
-    return -1
+for i in range(n1):
+	success = True
+	
+	for j in range(n2):
+		if i + j >= n1:
+			success = False
+			break
 
-index = find_index(a, b[0])
+		if a[i + j] != b[j]:
+			success = False
+			break
 
-i = 0
-is_sequnce = False
+	if success:
+		print("Yes")
+		sys.exit()
 
-if index:
-    for k in range(index, n1):
-        if a[k + 1] == b[i + 1]:
-            is_sequnce = True
-            break
-        else:
-            is_sequnce = False
-            break
-
-if is_sequnce:
-    print("Yes")
-else:
-    print("No")
+print("No")
