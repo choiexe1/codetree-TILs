@@ -11,17 +11,14 @@ def find_index(array, integer):
 index = find_index(a, b[0])
 
 i = 0
-
 is_sequnce = False
 
 if index:
-    while i <= len(b) - 1:
-        if a[index] == b[i]:
-            index += 1
-            i += 1
+    for k in range(index, n1):
+        if a[k] == b[i]:
+            is_sequnce = True
         else:
-            break
-    is_sequnce = True
+            is_sequnce = False
 
 if is_sequnce:
     print("Yes")
