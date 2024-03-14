@@ -1,22 +1,18 @@
 n = int(input())
-m = list(map(int, input().split()))
+a = list(map(int, input().split()))
 
-max = m[0]
-index = 0
+max = n
 
-for i, e in enumerate(m):
-    if e > max:
-        max = e
-        index = i
-
-print(index + 1, end=" ")
-max = 0
-
+# 첫 번째 원소가 최대가 되기 전까지 계속 반복합니다.
 while True:
+    index = 0
+    for i in range(1, max):
+        if a[i] > a[index]:
+            index = i
+
+    print(index + 1, end=" ")
+
     if index == 0:
         break
-    for i in range(index):
-        if m[i] > max:
-            max = m[i]
-            index = i
-    print(index + 1, end=" ")
+
+    max = index
