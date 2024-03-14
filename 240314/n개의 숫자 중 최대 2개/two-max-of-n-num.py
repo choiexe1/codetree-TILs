@@ -8,7 +8,7 @@ if x[0] > x[1]:
 else:
     max2, max1 = x[1], x[0]
 
-for i in range(2, len(x)):
+for i in range(2, n):
     if x[i] > max1:
         max1 = x[i]
     elif x[i] < max1 and x[i] > max2:
