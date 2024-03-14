@@ -9,7 +9,7 @@ for e in m:
 index = -1
 
 for i, e in enumerate(count):
-    if index == -1 and e == 1:
+    if e == 1:
         index = i
 
 print(index)
