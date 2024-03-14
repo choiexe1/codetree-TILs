@@ -2,7 +2,7 @@ n = int(input())
 m = list(map(int, input().split()))
 
 max = m[0]
-index = -1
+index = 0
 
 for i, e in enumerate(m):
     if e > max:
