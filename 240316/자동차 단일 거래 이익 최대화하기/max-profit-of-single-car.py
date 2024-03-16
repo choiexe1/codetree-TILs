@@ -1,23 +1,14 @@
-import sys
-
 n = int(input())
-m = list(map(int, input().split()))
+price = list(map(int, input().split()))
 
-min = [sys.maxsize, 0]
-
+# 배열을 앞에서부터 순회하며 사는 시점의 후보를 선택합니다
+max_profit = 0
 for i in range(n):
-    if m[i] < min[0]:
-        min[0], min[1] = m[i], i
+    # 사는 시점의 다음 해부터 순회하며 파는 시점의 후보를 선택합니다
+    for j in range(i + 1, n):
+        profit = price[j] - price[i]
 
-price = 0
-
-for e in m[min[1]:]:
-    if min[1] > e and price < min[1] - e:
-        price = min[1] - e
-    else:
-        price = e - min[1]
-
-if n == 1:
-    print(0)
-else:
-    print(price)
+        if profit > max_profit:
+            max_profit = profit
+    
+print(max_profit)
