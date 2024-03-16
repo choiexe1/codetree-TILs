@@ -1,19 +1,20 @@
+import sys
+
 n = int(input())
 m = list(map(int, input().split()))
 
-pp, p = 0, 1
+min = [sys.maxsize, 0]
+
+for i in range(n):
+    if m[i] < min[0]:
+        min[0], min[1] = m[i], i
+
 price = 0
 
-while pp != n - 1:
-    if p == n - 1:
-        p = 1
-        pp += 1
-
-    if m[pp] > m[p]:
-        price = m[pp] - m[p]
-        p += 1
+for e in m[min[1]:]:
+    if min[1] > e and price < min[1] - e:
+        price = min[1] - e
     else:
-        price = m[p] - m[pp]
-        p += 1
+        price = e - min[1]
 
 print(price)
