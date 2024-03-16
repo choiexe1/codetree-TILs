@@ -17,4 +17,7 @@ for e in m[min[1]:]:
     else:
         price = e - min[1]
 
-print(price)
+if price < 0:
+    print(0)
+else:
+    print(price)
