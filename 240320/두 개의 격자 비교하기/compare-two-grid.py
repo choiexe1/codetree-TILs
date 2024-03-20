@@ -1,5 +1,4 @@
 n, m = map(int, input().split())
-
 a, b = [], []
 
 for _ in range(n):
