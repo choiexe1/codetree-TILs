@@ -23,4 +23,4 @@ for e in y_sum:
     print(e / 2, end=" ")
 print()
 
-print(total / 8)
+print(f"{total / 8:.1f}")
