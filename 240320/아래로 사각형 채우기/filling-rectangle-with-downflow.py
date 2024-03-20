@@ -1,8 +1,17 @@
 n = int(input())
+x = 1
+
+arr = [
+    [0 for _ in range(n)] 
+    for _ in range(n)
+]
 
 for i in range(n):
-    if n == 1:
-        print(1)
-    for j in range(1, n * n, n):
-        print(i + j, end=" ")
+    for j in range(n):
+        arr[j][i] = x
+        x += 1
+
+for row in arr:
+    for e in row:
+        print(e, end=" ")
     print()
