@@ -1,6 +1,6 @@
 n, m = map(int, input().split())
 
-a, b, x = [], []
+a, b = [], []
 
 for _ in range(n):
     arr = list(map(int, input().split()))
